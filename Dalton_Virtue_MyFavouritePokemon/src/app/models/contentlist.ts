@@ -27,7 +27,7 @@ export class ContentList {
     toString(index: number): any {
         const item = this._content[index];
 
-        let html = `<ul>`;
+        let html = `<div style="border:2px solid black;"><ul>`;
         html += `<li>${item.name}</li>`;
         if (item.description) {
             html += `<li>${item.description}</li>`;
@@ -44,7 +44,7 @@ export class ContentList {
                 html += `<li> ${item.tags[i]} </li>`;
             }
         }
-        html += `</ul>`;
+        html += `</ul></div>`;
         
        
         return html;
