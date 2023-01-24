@@ -1,0 +1,50 @@
+import { IContent } from './icontent';
+
+export class ContentList {
+    private _content: IContent[] = [];
+    
+    constructor() {
+        this._content = [];
+    }
+
+    //getter method
+    get icontent(): IContent[] {
+        return this._content;
+    }
+
+    addContent(content: IContent): void {
+        this._content.push(content);
+    }
+
+    //gets length
+    getLength() {
+        return this._content.length;
+    }
+
+    toString(index: number): any {
+        const item = this._content[index];
+
+        let html = `<ul>`;
+        html += `<li>${item.name}</li>`;
+        if (item.description) {
+            html += `<li>${item.description}</li>`;
+        }
+        html += `<li>By ${item.author}</li>`;
+       
+        if (item.imgSrc) {
+            html += `<li><img src='${item.imgSrc}'/></li>`;
+        }
+        html += `<li> ${item.type}</li>`;
+
+        if(item.tags != null){
+            for(var i = 0; i < item.tags.length; i++){
+                html += `<li> ${item.tags[i]} </li>`;
+            }
+        }
+        html += `</ul>`;
+        
+       
+        return html;
+    }
+    
+}
