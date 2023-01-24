@@ -1,8 +1,10 @@
 import { IContent } from './icontent';
 
 export class ContentList {
+    //empty IContent array
     private _content: IContent[] = [];
     
+    //default constructor
     constructor() {
         this._content = [];
     }
@@ -13,6 +15,7 @@ export class ContentList {
     }
 
     addContent(content: IContent): void {
+        //push 1 new element to array
         this._content.push(content);
     }
 
