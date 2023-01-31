@@ -1,0 +1,15 @@
+<ContentListItem style="border: 2px solid black;">
+
+    <h2>{{contentItem.name}}</h2>
+    <img src = '{{contentItem.imageUrl}}' 
+    onclick="
+    function(){
+        console.log({{contentItem.id}});
+        console.log({{contentItem.description}});
+    } "/>
+    <p>{{contentItem.description}}</p>
+    <p>{{contentItem.author}}</p>
+    <p>{{contentItem.type}}</p>
+    <p>{{contentItem.tags}}</p>
+
+</ContentListItem>

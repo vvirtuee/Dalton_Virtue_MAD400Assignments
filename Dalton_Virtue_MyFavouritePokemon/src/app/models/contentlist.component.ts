@@ -3,17 +3,17 @@
   
 // Here we have imported 'Component' 
 // module from Angular library
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IContent } from './icontent';
   
 @Component({
     selector: 'app-content-list',
     templateUrl: './content-list.component.html',
-    styleUrls: ['./content-list.component.css']
+    styleUrls: ['./content-list.component.scss']
 })
 
 export class ContentListComponent{
-    contentList: IContent[] = []
+    @Input() contentList: IContent[] = []
     constructor(){
         this.contentList.push(
             {id: 0,
