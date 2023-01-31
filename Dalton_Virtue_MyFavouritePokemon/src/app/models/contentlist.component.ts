@@ -13,5 +13,12 @@ import { IContent } from './icontent';
 })
 
 export class ContentListComponent{
-
+    contentList: IContent[] = [
+        new IContent("Gastly", "Ghost ball pokemon gaseous", "Game Freak", "gastly.png", "Ghost", ["pokemon","ghost"]),
+        new IContent("Marowak","Adult form of Cubone","Game Freak","marowak.png", "Normal",["bone"]),
+        new IContent("Psyduck","Yellow duckling pokemon with insomnia","Game Freak", "psyduck.png", "Water", ["water","psychic","pokemon"]),
+        new IContent("Diglett", "Weird mole type Pokemon", "Game Freak", "diglett.png", "Ground", ["pokemon","ground"])
+    ];
+    constructor(){
+    }
 }
