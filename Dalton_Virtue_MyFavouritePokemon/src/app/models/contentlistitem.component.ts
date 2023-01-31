@@ -4,6 +4,7 @@
 // Here we have imported 'Component' 
 // module from Angular library
 import { Component } from '@angular/core';
+import { IContent } from './icontent';
   
 @Component({
     selector: 'app-content-list-item',
@@ -12,5 +13,8 @@ import { Component } from '@angular/core';
 })
 
 export class ContentListItemComponent{
-    
+    ic: IContent;
+    constructor(ic: IContent){
+        this.ic = ic;
+    }
 }
