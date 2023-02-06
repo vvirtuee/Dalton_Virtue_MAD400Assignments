@@ -1,7 +1,7 @@
 export const CONTENT = [
     {
         id: 0,
-        name: "Voltorb",
+        title: "Voltorb",
         description: "Electric Pokeball pokemon",
         author: "Game Freak",
         imgSrc: "voltorb.jpg",
@@ -10,7 +10,7 @@ export const CONTENT = [
     },
     {
         id: 1,
-        name: "Gastly",
+        title: "Gastly",
         description: "Ghost ball pokemon gaseous",
         author: "Game Freak",
         imgSrc: "gastly.png",
@@ -18,8 +18,8 @@ export const CONTENT = [
         tags: ["pokemon","ghost"]
     },
     {
-        id: 0,
-        name: "Marowak",
+        id: 3,
+        title: "Marowak",
         description: "Adult form of Cubone",
         author: "Game Freak",
         imgSrc: "marowak.png",
@@ -27,8 +27,8 @@ export const CONTENT = [
         tags: ["bone"]
     },
     {
-        id: 0,
-        name: "Psyduck",
+        id: 4,
+        title: "Psyduck",
         description: "Yellow duckling pokemon with insomnia",
         author: "Game Freak",
         imgSrc: "psyduck.png",
