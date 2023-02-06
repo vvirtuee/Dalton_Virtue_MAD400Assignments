@@ -6,9 +6,7 @@
   [class]="thisVideoGameIsEven ? 'even-game' : 'odd-game'"></app-content-list-item> -->
 
 <!-- We can also use an attribute built into angular for more flexibility, called ngClass -->
-<!--
 <app-content-list-item
-  *ngFor="let singleVideoGame of pokemonArray; even as thisVideoGameIsEven; odd as thisVideoGameIsOdd"
-  [contentItemInputValue]="singleVideoGame"
+  *ngFor="let pokemon of pokemonArray; even as thisVideoGameIsEven; odd as thisVideoGameIsOdd"
+  [contentItemInputValue]="pokemon"
   [ngClass]="{'even-game': thisVideoGameIsEven, 'odd-game': thisVideoGameIsOdd}"></app-content-list-item>
-  -->
