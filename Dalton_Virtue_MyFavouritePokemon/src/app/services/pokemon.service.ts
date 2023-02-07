@@ -15,8 +15,47 @@ export class PokemonService {
     return of(CONTENT);
   }
 
-  //return an individual data item based on the index number given
+  //return an individual data item based on the index number given (9.1)
+
+  //9.1 ~ method that accepts a number and returns the IContent item in the array that contains the same id as the number parameter 
+  //      (NOT the item in the array at that index)
   getContentItem(index: number): Observable<IContent> {
     return of(CONTENT[index]);
+  }
+
+  //9.2 ~ method that accepts an IContent item as an input, adds the item to the array, and returns the array after the new item is added
+  addContentItem(contentItem: IContent): IContent[]{
+    //pushing item to array which is an observable of the IContent item provided
+    CONTENT.push(
+      { id: contentItem.id,
+        title: contentItem.title,
+        description: contentItem.description ? contentItem.description : "",
+        author: contentItem.author,
+        imgSrc: contentItem.imgSrc ? contentItem.imgSrc : "",
+        type: contentItem.type,
+        tags: contentItem.tags ? contentItem.tags : [""]
+      });
+    return CONTENT;
+  }
+  //9.3 ~ method that accepts an IContent item as an input, updates an existing item in the array that has the same id as the input
+  //      parameter's id, and returns the array after the IContent item has been updated
+  updateContentItem(contentItem: IContent): IContent[]{
+    var id = contentItem.id;
+    CONTENT[id] = { id: contentItem.id,
+      title: contentItem.title,
+      description: contentItem.description ? contentItem.description : "",
+      author: contentItem.author,
+      imgSrc: contentItem.imgSrc ? contentItem.imgSrc : "",
+      type: contentItem.type,
+      tags: contentItem.tags ? contentItem.tags : [""]
+    };
+    return CONTENT;
+  }
+  //9,4 ~ method that accepts a number, removes the IContent item from the array that has the same id as the input number parameter, and
+  //      returns the IContent item that was removed
+  removeContentItem(index: number): IContent{
+    var removedElement = CONTENT[index];
+    CONTENT.splice(index,1);
+    return removedElement;
   }
 }
