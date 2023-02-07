@@ -10,7 +10,8 @@ import { ContentListItemComponent } from './content-list-item/content-list-item.
   declarations: [
     AppComponent,
     ContentListComponent,
-    ContentListItemComponent
+    ContentListItemComponent,
+    
   ],
   imports: [
     BrowserModule,

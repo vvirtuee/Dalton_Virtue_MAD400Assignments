@@ -7,7 +7,7 @@ import { PokemonService } from '../services/pokemon.service';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent{
+export class ContentListComponent implements OnInit{
 
   pokemonArray: IContent[] = [];
   //adding service using dependency injection

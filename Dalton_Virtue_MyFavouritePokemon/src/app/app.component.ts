@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IContent } from './models/icontent';
+import { PokemonService } from './services/pokemon.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +9,7 @@ import { IContent } from './models/icontent';
   styleUrls: ['./app.component.scss']
 })
 
-
-
 export class AppComponent {
-
-  constructor(){
-
-  }
+  public service: PokemonService = new PokemonService();
+  constructor(service: PokemonService){}
 }
