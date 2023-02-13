@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { SearchComponent } from './search/search.component';
 const routes: Routes = [
 
   //Assignment 4. ~ 8.) If a user visits root, they are 
@@ -26,6 +26,12 @@ const routes: Routes = [
     path: "content/:id",
     component: ContentDetailComponent
   },
+
+  //Assignment 4. ~ 9.)
+  {
+    path: "search",
+    component: SearchComponent
+  }
 ];
 
 @NgModule({

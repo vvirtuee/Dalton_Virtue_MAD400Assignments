@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentListItemComponent } from './content-list-item/content-list-item.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { SearchComponentComponent } from './search-component/search-component.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     ContentListComponent,
     ContentListItemComponent,
     ContentDetailComponent,
+    SearchComponentComponent,
+    SearchComponent,
     
   ],
   imports: [
