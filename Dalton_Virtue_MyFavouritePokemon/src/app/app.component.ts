@@ -10,6 +10,10 @@ import { Observable } from 'rxjs';
 })
 
 export class AppComponent {
+  title?: string;
   public service: PokemonService = new PokemonService();
-  constructor(service: PokemonService){}
+  constructor(service: PokemonService){
+    this.title = "Dalton Virtue - My Favourite Pokemon";
+  }
+  
 }
