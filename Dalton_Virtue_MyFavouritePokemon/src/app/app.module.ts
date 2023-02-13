@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentListItemComponent } from './content-list-item/content-list-item.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
-import { SearchComponentComponent } from './search-component/search-component.component';
 import { SearchComponent } from './search/search.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { SearchComponent } from './search/search.component';
     ContentListComponent,
     ContentListItemComponent,
     ContentDetailComponent,
-    SearchComponentComponent,
     SearchComponent,
     
   ],
