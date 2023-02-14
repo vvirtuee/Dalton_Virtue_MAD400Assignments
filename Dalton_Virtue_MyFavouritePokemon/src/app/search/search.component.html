@@ -1,3 +1,18 @@
-<p>search works!</p>
+
+<!-- Assignment 4.) Step 11a. Add input where user can specify ID number -->
+<input #inputElementReference>
+
+<div>Text from the input: {{ testID }}</div>
+
+<!-- Assignment 4.) Step 11b. Add a button below -->
+<button (click)="onClick(inputElementReference.value)">Console Log The Input Value</button>
+
+<!-- Assignment 4.) Step 11d. Display in single ContentListItem -->
+<!-- Step 11d. 
+<div *ngIf="item">
+
+</div>
+-->
+
 <!-- Assignment 4.) ~ 10. -->
 <app-content-list-item [innerHTML]=""></app-content-list-item>
