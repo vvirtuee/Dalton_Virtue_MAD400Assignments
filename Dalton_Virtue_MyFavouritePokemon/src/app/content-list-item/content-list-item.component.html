@@ -1,13 +1,19 @@
 <div *ngIf="contentItemInputValue">
     <!-- Any code inside the wrapping div is only displayed on the page if contentItemInputValue exists and has a valid value -->
     <h2>{{contentItemInputValue.title}}</h2>
+
+    <!-- Assignment 4: Step 13 - make the title a link that leads to the content detail's route for
+    the id number of th ecurrent ContentlistItem's Content-->
+    <a [routerLink]="'../' + (contentItemInputValue.id) + ''">Go to the next detail</a>
+
+
     <img [src]="contentItemInputValue.imgSrc" (click)="imageClicked()">
     <!-- I use innerHTML here juts in case I want to use HTML syntax in my description later -->
-    <p [innerHTML]="contentItemInputValue.description"></p>
+    <!--<p [innerHTML]="contentItemInputValue.description"></p> Assignment 4. step 13 -->
     <!-- Grabbed the rest of this code from my old ContentList toString in assignment 1 -->
     <!-- and modified it to be Angular syntax instead -->
     <div class="meta-data">
-        <span class="author">{{contentItemInputValue.author}}</span>
+        <!-- <span class="author">{{contentItemInputValue.author}}</span> Assignment 4. step 13 -->
         <span class="type">{{contentItemInputValue.type}}</span>
     </div>
     <div class="tags">
