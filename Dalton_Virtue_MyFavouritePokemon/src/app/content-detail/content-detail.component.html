@@ -1,1 +1,16 @@
-<p>content-detail works!</p>
+<div *ngIf="contentItem">
+    <h1 [innerHTML] = "{{contentItem.title}}"> </h1>
+    <p [innerHTML] = "{{contentItem.description}}"></p>
+
+    <img src="{{contentItem.imgSrc}}">
+    <p [innerHTML]="contentItem.body"></p>
+    <p [innerHTML]="contentItem.author"></p>
+    <div *ngIf="contentItem.type">{{contentItem.type}}</div>
+    <div *ngIf="contentItem.tags">{{contentItem.tags}}</div>
+
+    <link routerLink = "content">Click to return</link>
+
+    <p>
+      <a [routerLink]="'../' + (detailCakeItem.id + 1) + ''">Go to the next detail</a>
+    </p>
+  </div>
