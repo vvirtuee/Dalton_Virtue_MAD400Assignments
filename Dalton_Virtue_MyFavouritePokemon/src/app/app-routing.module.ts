@@ -31,6 +31,12 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchComponent
+  },
+
+  //Assignment 4. ~ 15.)
+  {
+    path: "**",
+    component: PageNotFoundComponent,
   }
 ];
 
