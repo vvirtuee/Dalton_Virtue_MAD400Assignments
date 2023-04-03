@@ -14,6 +14,7 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ModifyContentComponent } from './modify-content/modify-content.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     SearchComponent,
     TopNavBarComponentComponent,
     PageNotFoundComponentComponent,
+    ModifyContentComponent,
     
   ],
   imports: [
