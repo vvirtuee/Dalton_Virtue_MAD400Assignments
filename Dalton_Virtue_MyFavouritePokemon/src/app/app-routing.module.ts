@@ -39,7 +39,7 @@ const routes: Routes = [
   {
     path: 'addContent',
     component: ModifyContentComponent
-  }
+  },
 
   //Assignment 4. ~ 15.)
   {

@@ -7,3 +7,15 @@
 <p><label>Pokemon Description: <input [(ngModel)]="pokemonToAdd.description"></label></p>
 <p><label>Pokemon Image URL: <input [(ngModel)]="pokemonToAdd.imgSrc"></label></p>
 <p><label>Pokemon Type: <input [(ngModel)]="pokemonToAdd.type"></label></p>
+
+<!-- 14.3 -->
+<!-- when clicked, runs 'addContentToServer() function defined. Will remain disabled
+    if pokemonToAdd.id is null.'-->
+<p><button (click)="addContentToServer()" [disabled]="pokemonToAdd.id != undefined">Add Pokemon</button></p>
+
+<div *ngIf="pokemonToAdd.id != undefined">
+    <!-- 15.3 -->
+    <!-- display message below the button indicating IContent has been successfully added AFTER
+    the server completes adding the IContent and returns its new value. -->
+    Pokemon was successfully added. 
+</div></div>

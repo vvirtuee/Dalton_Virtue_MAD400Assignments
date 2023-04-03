@@ -82,12 +82,12 @@ export class PokemonService {
   }
 
   //DELETE op
-  removeContent(index: number): Observable<IContent>{
+  removeContent(index: number): Observable<Object>{
     return this.http.delete("api/pokemons" + index);
   }
 
   //UPDATE op
-  updateContent(index: number): Observable<IContent>{
-    return this.http.updateContentItem(index);
+  updateContent(index: number, data: any): Observable<IContent>{
+    return this.http.put("api/pokemons" + index, data);
   }
 }
