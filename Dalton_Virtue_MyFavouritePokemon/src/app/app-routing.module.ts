@@ -36,7 +36,7 @@ const routes: Routes = [
   //Assignment 4. ~ 15.)
   {
     path: "**",
-    component: PageNotFoundComponent,
+    component: PageNotFoundComponentComponent,
   }
 ];
 
