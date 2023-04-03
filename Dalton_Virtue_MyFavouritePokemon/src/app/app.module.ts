@@ -10,6 +10,11 @@ import { SearchComponent } from './search/search.component';
 import { TopNavBarComponentComponent } from './top-nav-bar-component/top-nav-bar-component.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
+
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+
 @NgModule({
   declarations: [
     AppComponent,
