@@ -9,7 +9,8 @@
 <p><label>Pokemon Type: <input [(ngModel)]="pokemonToAdd.type"></label></p>
 
 <!-- 17.1 ~ input for ID field which should be disabled by default. -->
-<p><label>Pokemon ID: <input [disabled] = "true" [(ngModel)]="pokemonToAdd.title"></label></p>
+
+<p><label>Pokemon ID: <input [disabled] = "passedId == null" [(ngModel)]="pokemonToAdd.title"></label></p>
 
 
 <!-- 14.3 -->

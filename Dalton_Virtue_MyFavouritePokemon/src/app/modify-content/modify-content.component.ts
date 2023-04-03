@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IContent } from '../models/icontent';
 import { PokemonService } from '../services/pokemon.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-modify-content',
@@ -8,13 +9,17 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./modify-content.component.scss']
 })
 export class ModifyContentComponent {
+  passedId: number;
   pokemonToAdd: IContent = {
     title: "",
     description: "",
     imgSrc: "",
     type: "",
   }
-  constructor(private content: PokemonService) {}
+  //pass number received from url
+  constructor(private content: PokemonService, private route: ActivatedRoute) {
+    this.passedId=this.route.params.snapshot['id']
+  }
   addContentToServer(): void {
     console.log(this.pokemonToAdd);
     //add a new IContent item to the server database
