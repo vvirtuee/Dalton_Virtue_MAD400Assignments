@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { IContent } from '../models/icontent';
 import { Observable, of } from 'rxjs';
 import { CONTENT } from '../data/mock-content';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  constructor() { }
-
+  /*
   //return an observable of the IContent array from mock-conent file in data folder
   getContent(): Observable<IContent[]> {
     return of(CONTENT);
@@ -57,5 +57,38 @@ export class PokemonService {
     var removedElement = CONTENT[index];
     CONTENT.splice(index,1);
     return removedElement;
+  }
+
+  */
+
+  //Assignment 5 ~ 9
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+  constructor(private http: HttpClient){}
+
+  //CRUD operations
+  //READ ops
+  getContent(): Observable<IContent[]> {
+    return this.http.get<IContent[]>("api/pokemons");
+  }
+  getContentItem(index: number): Observable<IContent> {
+    return this.http.get<IContent>("api/pokemons/" + index)
+  }
+  //CREATE op
+  addContent(singlePokemon: IContent): Observable<IContent> {
+    return this.http.post<IContent>("api/pokemons", singlePokemon, this.httpOptions);
+  }
+
+  //DELETE op
+  removeContent(index: number): Observable<IContent>{
+    return this.http.delete("api/pokemons" + index);
+  }
+
+  //UPDATE op
+  updateContent(index: number): Observable<IContent>{
+    return this.http.updateContentItem(index);
   }
 }
