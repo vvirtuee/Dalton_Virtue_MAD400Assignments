@@ -10,7 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { TopNavBarComponentComponent } from './top-nav-bar-component/top-nav-bar-component.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
-
+//initializing 'angular-in-memory-web-api' in app.module.ts
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
@@ -28,7 +28,11 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      delay: 1000,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
