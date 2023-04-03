@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IContent } from '../models/icontent';
-
+import { ActivatedRoute, Router} from '@angular/router';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-content-detail',
@@ -11,7 +12,7 @@ export class ContentDetailComponent implements OnInit{
   contentItem?: IContent;
   constructor(
     private router: Router,
-    private contentService: ContentService,
+    private contentService: PokemonService,
     private route: ActivatedRoute) {
   }
 
@@ -19,11 +20,13 @@ export class ContentDetailComponent implements OnInit{
 
     //retrieve the IContent item from content service based on id passed into component
     //via routing rule created
+
+    
     this.route.paramMap.subscribe(params => {
       let id: number = 0;
       
       //concat param from url
-      id = +(params.get('id'));
+      id = +(params.get('id')) != null ? +(params.get('id')) : 0;
 
       this.contentService.getContentItem(id).subscribe((singleDetailItem: IContent) => {
 
