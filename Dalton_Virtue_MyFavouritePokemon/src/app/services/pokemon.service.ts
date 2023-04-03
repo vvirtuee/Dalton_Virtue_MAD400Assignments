@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IContent } from '../models/icontent';
 import { Observable, of } from 'rxjs';
-import { CONTENT } from '../data/mock-content';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
