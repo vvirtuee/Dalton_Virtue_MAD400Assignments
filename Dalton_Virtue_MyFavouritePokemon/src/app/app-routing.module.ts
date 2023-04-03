@@ -41,6 +41,13 @@ const routes: Routes = [
     component: ModifyContentComponent
   },
 
+  //Assignment 5. ~ 16.)
+  {
+    //number will represent id of the IContent being updated.
+    path: '/editContent/:id',
+    component: ModifyContentComponent
+  },
+
   //Assignment 4. ~ 15.)
   {
     path: "**",
