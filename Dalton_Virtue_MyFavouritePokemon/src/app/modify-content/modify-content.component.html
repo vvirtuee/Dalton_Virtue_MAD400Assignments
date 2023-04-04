@@ -1,6 +1,9 @@
 
 <!-- 14.1 -->
-<h1> Add new content </h1>
+
+<!-- 19.1 ~ header at top of page should update if user is updating or adding content to page. -->
+<h1>{{pokemonToAdd.id != null ? "Updating Content" : "Add Content" }}</h1>
+
 
 <!-- 14.2 -->
 <p><label>Pokemon Name: <input [(ngModel)]="pokemonToAdd.title"></label></p>
@@ -14,9 +17,11 @@
 
 
 <!-- 14.3 -->
-<!-- when clicked, runs 'addContentToServer() function defined. Will remain disabled
+<!-- when clicked, runs 'addContentToServer()' function defined. Will remain disabled
     if pokemonToAdd.id is null.'-->
-<p><button (click)="addContentToServer()" [disabled]="pokemonToAdd.id != undefined">Add Pokemon</button></p>
+<p><button (click)="addContentToServer()" [disabled]="pokemonToAdd.id != undefined">
+    {{pokemonToAdd.id != null ? "Update Pokemon" : "Add Pokemon" }}
+</button></p>
 
 <div *ngIf="pokemonToAdd.id != undefined">
     <!-- 15.3 -->
