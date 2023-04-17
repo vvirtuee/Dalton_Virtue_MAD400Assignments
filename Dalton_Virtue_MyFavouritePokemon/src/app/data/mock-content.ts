@@ -5,7 +5,7 @@ export const CONTENT = [
         description: "Electric Pokeball pokemon",
         author: "Game Freak",
         imgSrc: "voltorb.jpg",
-        type: "Electric",
+        type: ["Electric",""],
         tags: ["pokemon","ball"]
     },
     {
@@ -14,7 +14,7 @@ export const CONTENT = [
         description: "Ghost ball pokemon gaseous",
         author: "Game Freak",
         imgSrc: "gastly.png",
-        type: "Ghost",
+        type: ["Ghost",""],
         tags: ["pokemon","ghost"]
     },
     {
@@ -23,7 +23,7 @@ export const CONTENT = [
         description: "Adult form of Cubone",
         author: "Game Freak",
         imgSrc: "marowak.png",
-        type: "Normal",
+        type: ["Normal","Ground"],
         tags: ["bone"]
     },
     {
@@ -32,7 +32,7 @@ export const CONTENT = [
         description: "Yellow duckling pokemon with insomnia",
         author: "Game Freak",
         imgSrc: "psyduck.png",
-        type: "Water",
+        type: ["Water","Psychic"],
         tags: ["water","psychic","pokemon"]
     },
     {
@@ -41,7 +41,7 @@ export const CONTENT = [
         description: "Large rock-snake like pokemon",
         author: "Game Freak",
         imgSrc: "onix.png",
-        type: "Rock",
+        type: ["Rock",""],
         tags: ["rock","pokemon"]
     },
     {
@@ -50,7 +50,7 @@ export const CONTENT = [
         description: "Orange electric mouse Pokemon, evolution of Pikachu.",
         author: "Game Freak",
         imgSrc: "raichu.png",
-        type: "Electric",
+        type: ["Electric","Ground"],
         tags: ["electric","pokemon"]
     }
 ];
