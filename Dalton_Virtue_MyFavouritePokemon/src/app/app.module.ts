@@ -14,8 +14,7 @@ import { FilterIContentPipe } from './filter-icontent.pipe';
     ContentListComponent,
     ContentListItemComponent,
     TopNavComponentComponent,
-    FilterIContentPipe
-    
+    FilterIContentPipe,
   ],
   imports: [
     BrowserModule,
