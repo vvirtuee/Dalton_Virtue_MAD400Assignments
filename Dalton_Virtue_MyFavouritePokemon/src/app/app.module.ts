@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentListItemComponent } from './content-list-item/content-list-item.component';
 import { TopNavComponentComponent } from './top-nav-component/top-nav-component.component';
+import { FilterIContentPipe } from './filter-icontent.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { TopNavComponentComponent } from './top-nav-component/top-nav-component.
     ContentListComponent,
     ContentListItemComponent,
     TopNavComponentComponent,
+    FilterIContentPipe
     
   ],
   imports: [
