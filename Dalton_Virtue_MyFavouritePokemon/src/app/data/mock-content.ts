@@ -34,5 +34,23 @@ export const CONTENT = [
         imgSrc: "psyduck.png",
         type: "Water",
         tags: ["water","psychic","pokemon"]
+    },
+    {
+        id: 5,
+        title: "Onix",
+        description: "Large rock-snake like pokemon",
+        author: "Game Freak",
+        imgSrc: "onix.png",
+        type: "Rock",
+        tags: ["rock","pokemon"]
+    },
+    {
+        id: 6,
+        title: "Raichu",
+        description: "Orange electric mouse Pokemon, evolution of Pikachu.",
+        author: "Game Freak",
+        imgSrc: "raichu.png",
+        type: "Electric",
+        tags: ["electric","pokemon"]
     }
 ];
